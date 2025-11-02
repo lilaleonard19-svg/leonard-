@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>compteur de pavé</title>
+</head>
+<body>
+	<h1>Léon et ces pavé</h1>
+	<table>
+		<tr>
+
+		<th><h2>Mise en contexte</h2></th>
+		
+		<tr>
+
+		<th><p>Léon est un garçon de 16 ans qui essaie tant bien que mal de se trouver une femelle.<br> Malheureusement, il n'a pas réussi tout à fait à en trouver une. Lors de ses essais, il a reçu quelques gros pavés.<br> Malheureusement, Léon n'a pas voulu arrêter au premier et les pavés sont devenus une addiction pour lui.<br> Actuellement, cela fait plusieurs mois qu'il n'arrive pas à s'arrêter et il prend des pavés tous les mois.<br> C'est pour cela que ce compteur de pavés est là pour savoir à combien de pavés il en a. <br>nous avons ajouté un vote aussi pour savoir si Léon devrait arrêter</p></th>
+		  <h2>compteur de pavés </h1>
+  <h3><div id="counter">0</div>
+  <button onclick="increment()">Ajouter 1</button>
+
+  <script>
+    let montant = 0;
+
+    function increment() {
+      montant++;
+      document.getElementById("counter").textContent = "Pavé" + montant;
+    }
+  </script></h3>
+   <h2>doit il arrêter?</h2>
+  <button onclick="vote('oui')">oui</button>
+  <button onclick="vote('non')">non</button>
+
+  <div class="results">
+    <p>Option A : <span id="oui">0</span> votes</p>
+    <p>Option B : <span id="non">0</span> votes</p>
+  </div>
+
+  <script>
+    let votes = { oui: 0, non: 0 };
+
+    function vote(option) {
+      votes[option]++;
+      document.getElementById('oui').textContent = votes.oui;
+      document.getElementById('non').textContent = votes.non;
+    }
+  </script>
+
+
+
+</body>
+</html>
